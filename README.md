@@ -19,12 +19,6 @@ Odaklanma zamanlayıcısı, çalışma istatistikleri ve sınav konu takibi tek 
 
 `index.html` dosyasını açmanız yeterli. Çevrimdışı ve ana ekrana ekleme özellikleri için dosyanın bir web adresinden (`https://`) sunulması gerekir.
 
-### GitHub Pages ile yayınlama
-
-1. Depo ayarlarında **Settings → Pages** bölümüne gidin.
-2. **Source** olarak `Deploy from a branch`, dal olarak `main` ve klasör olarak `/ (root)` seçin.
-3. Birkaç dakika sonra uygulama `https://KULLANICI_ADINIZ.github.io/DEPO_ADI/` adresinde yayında olur.
-
 ### Telefonda
 
 Yayınlanan adresi telefonda açın. Android'de Chrome menüsünden **Ana ekrana ekle / Uygulamayı yükle**, iPhone'da Safari'de **Paylaş → Ana Ekrana Ekle** deyin.
