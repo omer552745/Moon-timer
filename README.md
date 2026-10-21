@@ -5,12 +5,10 @@ Odaklanma zamanlayıcısı, çalışma istatistikleri ve sınav konu takibi tek 
 ## Özellikler
 
 - **Zamanlayıcı:** 1-180 dakika arası süre (listeden seçin ya da yazın), geri sayım, duraklatma, tur kaydı. Süre bitince otomatik tur eklenir ve yeni süre başlar.
-- **Ay animasyonu:** Hilal-yarım ay çizimi, süre ilerledikçe parlaklaşır; yüzde ayın ortasında görünür.
 - **İstatistik:** Bugün, bu hafta ve bu ay için çalışma süresi (saat) ile haftanın günlerine göre çubuk grafik. Zamanlayıcı çalışırken canlı güncellenir.
 - **Konu takibi:** TYT, AYT, KPSS ve AGS için sınav ve ders seçip konuları tikleyin; ilerleme çubuğu ve sayaçlar.
 - **Notlar:** Beş satırlık, tiklenebilir not listesi.
-- **Ortam sesleri:** Kamp ateşi, yağmur, şömine ve sınav ortamı. Sesler tarayıcıda üretilir, ses dosyası gerekmez. Ses seviyesi ayarı vardır.
-- **Alt çubuk:** Sayfalar arasında alttaki düğmeyi sağa kaydırarak geçilir.
+- **Ortam sesleri:** Kamp ateşi, yağmur, şömine ve sınav ortamı. Sesler tarayıcıda üretilir, ses dosyası gerekmez. Ses seviyesi ayarı vardır..
 - **Mobil uyumlu:** Telefon ekranına göre düzenlenir; PWA olarak ana ekrana eklenebilir.
 
 ## Hızlı başlangıç
@@ -37,7 +35,7 @@ npm run dist       # dist/ klasöründe kurulum dosyası (.exe) üretir
 
 ## Veri ve gizlilik
 
-Notlar, istatistikler, konu işaretleri ve ayarlar yalnızca kendi cihazınızdaki tarayıcı depolamasında (`localStorage`) tutulur, hiçbir sunucuya gönderilmez. Yazı tipi (Manrope) internetten Google Fonts üzerinden yüklenir. Cihazlar arasında senkronizasyon yoktur.
+Notlar, istatistikler, konu işaretleri ve ayarlar yalnızca kendi cihazınızdaki tarayıcı depolamasında (`localStorage`) tutulur, hiçbir sunucuya gönderilmez. Cihazlar arasında senkronizasyon yoktur.
 
 ## Konu listeleri hakkında
 
