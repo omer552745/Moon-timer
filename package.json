@@ -1,0 +1,33 @@
+{
+  "name": "moon-timer",
+  "version": "1.0.0",
+  "description": "Moon Timer - odaklanma zamanlayıcısı, istatistik ve konu takibi",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.moontimer.app",
+    "productName": "Moon Timer",
+    "files": [
+      "main.js",
+      "index.html",
+      "icons/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icons/moon-timer.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  }
+}
