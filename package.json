@@ -4,9 +4,15 @@
   "description": "Moon Timer - odaklanma zamanlayıcısı, istatistik ve konu takibi",
   "main": "main.js",
   "license": "MIT",
+  "author": "Moon Timer contributors",
+  "homepage": "https://github.com/omer552745/Moon-timer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omer552745/Moon-timer.git"
+  },
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win"
+    "dist": "electron-builder --win --publish never"
   },
   "devDependencies": {
     "electron": "^33.0.0",
@@ -21,13 +27,20 @@
       "icons/**/*"
     ],
     "win": {
-      "target": "nsis",
+      "target": [
+        "nsis",
+        "portable"
+      ],
       "icon": "icons/moon-timer.ico"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true
+      "createDesktopShortcut": true,
+      "artifactName": "Moon-Timer-Setup.${ext}"
+    },
+    "portable": {
+      "artifactName": "Moon-Timer-Portable.${ext}"
     }
   }
 }
