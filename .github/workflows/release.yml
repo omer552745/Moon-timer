@@ -1,0 +1,53 @@
+name: Windows surumunu derle
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: "src-tauri -> target"
+
+      - name: Bagimliliklari kur
+        run: npm install
+
+      - name: Uygulamayi derle
+        run: npm run build
+
+      - name: Dosyalari hazirla
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path out | Out-Null
+          $setup = Get-ChildItem "src-tauri/target/release/bundle/nsis" -Filter "*-setup.exe" | Select-Object -First 1
+          Copy-Item $setup.FullName "out/Moon-Timer-Setup.exe"
+          Copy-Item "src-tauri/target/release/moon-timer.exe" "out/Moon-Timer-Portable.exe"
+
+      - name: Derlemeyi arsivle
+        uses: actions/upload-artifact@v4
+        with:
+          name: moon-timer-windows
+          path: out/*.exe
+
+      - name: Surume ekle
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: out/*.exe
+          generate_release_notes: true
