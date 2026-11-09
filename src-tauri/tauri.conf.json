@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Moon Timer",
+  "version": "1.0.0",
+  "identifier": "com.moontimer.desktop",
+  "build": {
+    "beforeDevCommand": "node scripts/prepare-app.mjs",
+    "beforeBuildCommand": "node scripts/prepare-app.mjs",
+    "frontendDist": "../tauri-dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Moon Timer",
+        "width": 1360,
+        "height": 900,
+        "minWidth": 380,
+        "minHeight": 640,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "shortDescription": "Odaklanma zamanlayıcısı, istatistik ve konu takibi",
+    "copyright": "MIT License",
+    "category": "Productivity",
+    "windows": {
+      "nsis": {
+        "languages": [
+          "Turkish",
+          "English"
+        ],
+        "installMode": "currentUser"
+      }
+    }
+  }
+}
