@@ -21,7 +21,7 @@ Windows'ta ilk açılışta "Windows bilgisayarınızı korudu" uyarısı çıka
 - **Konu takibi:** TYT, AYT, KPSS ve AGS için sınav ve ders seçip konuları tikleyin; ilerleme çubuğu ve sayaçlar.
 - **Ortam sesleri:** Kamp ateşi, yağmur, şömine ve sınav ortamı. Sesler tarayıcıda üretilir, ses dosyası gerekmez. Ses seviyesi ayarı vardır.
 - **Mobil uyumlu:** Telefon ekranına göre düzenlenir; PWA olarak ana ekrana eklenebilir.
-
+- **Minimal kaynak tüketimi ve akıcı performans bir arada.
 ## Veri ve gizlilik
 
 Notlar, istatistikler, konu işaretleri ve ayarlar yalnızca kendi cihazınızdaki depolamada (`localStorage`) tutulur, hiçbir sunucuya gönderilmez. Yazı tipi (Manrope) internetten Google Fonts üzerinden yüklenir. Cihazlar arasında senkronizasyon yoktur.
